@@ -1,0 +1,11 @@
+{
+  "languageserver": {
+    "go": {
+      "command": "gopls",
+      "test": "1234",
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
+    }
+  }
+}
