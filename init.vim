@@ -38,7 +38,7 @@ Plug 'janko-m/vim-test'
 
 " IDE
 Plug 'editorconfig/editorconfig-vim'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
@@ -56,6 +56,10 @@ colorscheme gruvbox
 map <silent> <C-n> :NERDTreeFocus<CR>
 set colorcolumn=80
 set number
+set modifiable
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gr <Plug>(coc-references)
+nnoremap <C-p> :GFiles<CR>
 
 
 
