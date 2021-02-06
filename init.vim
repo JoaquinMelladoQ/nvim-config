@@ -54,4 +54,10 @@ call plug#end()
 
 colorscheme gruvbox
 map <silent> <C-n> :NERDTreeFocus<CR>
+set colorcolumn=80
+set number
+
+
+
+
 
