@@ -48,20 +48,43 @@ Plug 'scrooloose/nerdcommenter'
 
 " git
 Plug 'tpope/vim-fugitive'
-
 Plug 'tpope/vim-repeat'
+
+" Move code
+Plug 'tpope/vim-unimpaired'
+
 call plug#end()
 
 colorscheme gruvbox
+let g:gruvbox_contrast_dark = "hard"
+let NERDTreeQuitOnOpen=1
 map <silent> <C-n> :NERDTreeFocus<CR>
 set colorcolumn=80
 set number
+set numberwidth=1
+set relativenumber
+set laststatus=2
+set noshowmode
+set showcmd
+set sw=2
+set mouse=a
+set cursorline
+set clipboard=unnamed
+syntax enable
+set showmatch
 set modifiable
+
+let mapleader= " "
+nmap <leader>s <Plug>(easymotion-s2)
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gr <Plug>(coc-references)
+nmap <leader>nt :NERDTreeFind<CR>
 nnoremap <C-p> :GFiles<CR>
+let g:python3_host_prog = '/usr/bin/python3' 
 
-
-
-
-
+" Move single lines
+nmap <C-k> [e
+nmap <C-j> ]e
+" Move multiple lines selected
+vmap <C-k> [egv
+vmap <C-j> ]egv
