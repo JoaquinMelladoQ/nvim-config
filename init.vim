@@ -1,6 +1,5 @@
 set nocompatible          " be iMproved, required
 filetype off               " required
-
 call plug#begin('~/.config/nvim/plugged')
 " syntax
 Plug 'sheerun/vim-polyglot'
@@ -53,6 +52,13 @@ Plug 'tpope/vim-repeat'
 " Move code
 Plug 'tpope/vim-unimpaired'
 
+" Rails Let Vundle manage
+Plug 'gmarik/Vundle.vim'
+
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-endwise'
+Plug 'thoughtbot/vim-rspec'
+
 call plug#end()
 
 colorscheme gruvbox
@@ -79,6 +85,9 @@ nmap <leader>s <Plug>(easymotion-s2)
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gr <Plug>(coc-references)
 nmap <leader>nt :NERDTreeFind<CR>
+nmap <leader>q :q<CR>
+nmap <leader>w :w<CR>
+nmap <leader>ex :ex.<CR>
 nnoremap <C-p> :GFiles<CR>
 let g:python3_host_prog = '/usr/bin/python3' 
 
