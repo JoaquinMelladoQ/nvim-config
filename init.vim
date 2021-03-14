@@ -31,6 +31,9 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'sirver/ultisnips'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Comments
+Plug 'preservim/nerdcommenter'
+
 " test
 Plug 'tyewang/vimux-jest-test'
 Plug 'janko-m/vim-test'
@@ -88,6 +91,7 @@ nmap <leader>nt :NERDTreeFind<CR>
 nmap <leader>q :q<CR>
 nmap <leader>w :w<CR>
 nmap <leader>ex :ex.<CR>
+nmap <leader>wq :wq<CR>
 nnoremap <C-p> :GFiles<CR>
 let g:python3_host_prog = '/usr/bin/python3' 
 
@@ -97,3 +101,4 @@ nmap <C-j> ]e
 " Move multiple lines selected
 vmap <C-k> [egv
 vmap <C-j> ]egv
+
