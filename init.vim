@@ -83,16 +83,37 @@ syntax enable
 set showmatch
 set modifiable
 
+" Kite
+let g:kite_supported_languages = ['javascript', 'python']
+
+" Coc
+autocmd FileType python let b:coc_suggest_disable = 1
+autocmd FileType javascript let b:coc_suggest_disable = 1
+autocmd FileType scss setl iskeyword+=@-@ 
+
 let mapleader= " "
+
 nmap <leader>s <Plug>(easymotion-s2)
-nmap <leader>gd <Plug>(coc-definition)
-nmap <leader>gr <Plug>(coc-references)
 nmap <leader>nt :NERDTreeFind<CR>
 nmap <leader>q :q<CR>
 nmap <leader>w :w<CR>
 nmap <leader>ex :ex.<CR>
 nmap <leader>wq :wq<CR>
 nnoremap <C-p> :GFiles<CR>
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use <c-space> to trigger completion
+if &filetype == "javascript" || &filetype == "python"
+	inoremap <c-space> <C-x><C-u>
+else
+	inoremap <silent><expr> <c-space> coc#refresh()
+endif
+
 let g:python3_host_prog = '/usr/bin/python3' 
 
 " Move single lines
