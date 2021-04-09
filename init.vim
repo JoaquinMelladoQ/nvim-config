@@ -31,6 +31,9 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'sirver/ultisnips'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Snippets
+Plug 'honza/vim-snippets'
+
 " Comments
 Plug 'preservim/nerdcommenter'
 
